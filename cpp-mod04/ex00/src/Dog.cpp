@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 14:41:17 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/15 11:39:48 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/15 17:03:54 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ Dog::Dog(const Dog& other) : Animal()
 Dog& Dog::operator=(const Dog& other)
 {
 	std::cout << "Dog: Copy assignment operator called" << std::endl;
-	if (this != &other) {
+	if (this != &other)
+	{
 		this->_type = other._type;
 	}
 	return (*this);

@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 14:31:58 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/15 11:38:53 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/15 16:35:32 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Dog : public Animal
 		~Dog();
 
 		void makeSound() const;
+		std::string getIdea(int index) const;
 
 	private:
 		Brain *_brain;

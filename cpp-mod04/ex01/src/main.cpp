@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 15:51:07 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/15 12:45:30 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/15 17:10:47 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,43 @@ int main()
 		delete animals[k];
 
 	std::cout << std::endl;
-	std::cout << "Assignment tests..." << std::endl;
+	std::cout << "   ****************    Assignment tests...   ****************    " << std::endl;
 	std::cout << std::endl;
 	
 	Dog Baruk;
 	{
+		std::cout << "Baruk" << std::endl;
+		std::cout << "I'am a " << Baruk.getType() << " with an Idea: " << Baruk.getIdea(0) << std::endl;
+		std::cout << "My Sound is : ";
+		Baruk.makeSound();
+		std::cout << std::endl;
+		
 		Dog tmp = Baruk;
+		std::cout << std::endl;
+		std::cout << "tmp" << std::endl;
+		std::cout << tmp.getType() << " Idea:  "<< tmp.getIdea(99) << std::endl;	
+		std::cout << "tmp Sound: ";
+		tmp.makeSound();
+		std::cout << std::endl;
 	}
+
+	std::cout << std::endl;
 
 	Cat Lucky;
 	{
+		std::cout << "Lucky" << std::endl;
+		std::cout << "I'am a " << Lucky.getType() << " with an Idea: " << Lucky.getIdea(5) << std::endl;
+		std::cout << "My Sound is : ";
+		Lucky.makeSound();
+		std::cout << std::endl;
+		
 		Cat tmp = Lucky;
+		std::cout << std::endl;
+		std::cout << "tmp" << std::endl;
+		std::cout << tmp.getType() << " Idea:  "<< tmp.getIdea(100) << std::endl;	
+		std::cout << "tmp Sound: ";
+		tmp.makeSound();
+		std::cout << std::endl;
 	}
 
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 14:41:17 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/15 12:48:54 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/15 17:04:54 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,12 @@ Dog::Dog(const Dog& other) : Animal(), _brain(NULL)
 Dog& Dog::operator=(const Dog& other)
 {
 	std::cout << "Dog: Copy assignment operator called" << std::endl;
-	if (this != &other) {
+	if (this != &other)
+	{
 		this->_type = other._type;
+		if (this->_brain)
+			delete this->_brain;
+		this->_brain = new Brain (*other._brain);
 	}
 	return (*this);
 };
@@ -47,5 +51,14 @@ Dog::~Dog()
 //Member function
 void Dog::makeSound() const
 {
-	std::cout << this->_type << ": Bark !!!" << std::endl;
+	std::cout << "Bark !!!" << std::endl;
 };
+
+// Method for accessing Dog's brain ideas
+std::string Dog::getIdea(int index) const
+{
+	if (_brain != NULL)
+		return _brain->getIdea(index);
+	else
+		return "";
+}

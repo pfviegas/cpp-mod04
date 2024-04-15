@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 14:01:28 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/15 12:49:04 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/15 16:33:51 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,3 +50,12 @@ void Cat::makeSound() const
 {
 	std::cout << _type << ": Meow !!!" << std::endl;
 };
+
+// Method for accessing Cat's brain ideas
+std::string Cat::getIdea(int index) const
+{
+	if (_brain != NULL)
+		return _brain->getIdea(index);
+	else
+		return "";
+}
