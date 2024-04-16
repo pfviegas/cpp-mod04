@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 15:51:07 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/13 13:26:27 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/16 11:29:05 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int main()
 		const Animal* cat = new Cat();
 		std::cout << std::endl;
 		
-		std::cout << "Type: " << animal->getType() << " " << std::endl;
-		std::cout << "Type: " << dog->getType() << " " << std::endl;
-		std::cout << "Type: " << cat->getType() << " " << std::endl;
+		std::cout << "Animal Type: " << animal->getType() << " " << std::endl;
+		std::cout << "   Dog Type: " << dog->getType() << " " << std::endl;
+		std::cout << "   Cat Type: " << cat->getType() << " " << std::endl;
 		std::cout << std::endl;
 		
 		animal->makeSound();
@@ -46,8 +46,8 @@ int main()
 		const WrongAnimal* cat = new WrongCat();
 		std::cout << std::endl;
 
-		std::cout << "Type: " << animal->getType() << " " << std::endl;
-		std::cout << "Type: " << cat->getType() << " " << std::endl;
+		std::cout << "Animal Type: " << animal->getType() << " " << std::endl;
+		std::cout << "   cat Type: " << cat->getType() << " " << std::endl;
 		std::cout << std::endl;
 		
 		cat->makeSound();

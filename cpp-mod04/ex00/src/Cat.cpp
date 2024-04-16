@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 14:01:28 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/13 11:47:24 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/16 13:15:47 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 Cat::Cat()
 {
 	std::cout << "Cat: Default constructor called" << std::endl;
-	_type = "Cat";
+	this->_type = "Cat";
 };
 
 // Copy Constructor
@@ -46,5 +46,5 @@ Cat::~Cat()
 //Member function
 void Cat::makeSound() const
 {
-	std::cout << _type << ": Meow !!!" << std::endl;
+	std::cout << this->_type << ": Meow !!!" << std::endl;
 };

@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 15:09:42 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/13 12:12:07 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/16 13:16:52 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,5 @@ void WrongAnimal::makeSound() const
 // Getter
 std::string WrongAnimal::getType() const
 {
-	return (_type);
+	return (this->_type);
 };

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/05 14:01:28 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/15 16:33:51 by pviegas          ###   ########.fr       */
+/*   Created: 2024/04/09 11:33:28 by pviegas           #+#    #+#             */
+/*   Updated: 2024/04/16 13:20:32 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 Cat::Cat()
 {
 	std::cout << "Cat: Default constructor called" << std::endl;
-	_type = "Cat";
-	_brain = new Brain();
+	this->_type = "Cat";
+	this->_brain = new Brain();
 };
 
 // Copy Constructor
@@ -42,20 +42,20 @@ Cat& Cat::operator=(const Cat& other)
 Cat::~Cat()
 {
 	std::cout << "Cat: Destructor called" << std::endl;
-	delete _brain;
+	delete this->_brain;
 };
 
 //Member function
 void Cat::makeSound() const
 {
-	std::cout << _type << ": Meow !!!" << std::endl;
+	std::cout << "Meow !!!" << std::endl;
 };
 
 // Method for accessing Cat's brain ideas
-std::string Cat::getIdea(int index) const
+std::string Cat::think(int index) const
 {
-	if (_brain != NULL)
-		return _brain->getIdea(index);
+	if (this->_brain != NULL)
+		return (this->_brain->getIdea(index));
 	else
 		return "";
 }
