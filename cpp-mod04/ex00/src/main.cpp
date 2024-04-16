@@ -6,7 +6,7 @@
 /*   By: pviegas <pviegas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 15:51:07 by pviegas           #+#    #+#             */
-/*   Updated: 2024/04/16 11:29:05 by pviegas          ###   ########.fr       */
+/*   Updated: 2024/04/16 15:47:36 by pviegas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,21 @@ int main()
 		std::cout << "   cat Type: " << cat->getType() << " " << std::endl;
 		std::cout << std::endl;
 		
-		cat->makeSound();
 		animal->makeSound();
+		cat->makeSound();
 		std::cout << std::endl;
 
+		WrongCat cat1;
+		std::cout << std::endl;
+		cat1.makeSound();
+		std::cout << std::endl;
+		WrongCat* cat2 = new WrongCat();
+		std::cout << std::endl;
+		cat2->makeSound();
+		std::cout << std::endl;
+		delete cat2;
+		std::cout << std::endl;
+		
 		delete animal;
 		delete cat;
 	}
